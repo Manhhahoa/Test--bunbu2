@@ -1,0 +1,82 @@
+.Header{
+    .img-search{
+    background-image: url('https://fullstack.edu.vn/static/media/search.9bd3926522ea0937310c.svg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    border-radius: 50%;
+    height: 32px;
+    opacity: .7;
+    transition: opacity .2s ease-in-out;
+    width: 30px;
+    }
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0 28px;
+   height: 66px;
+   background-color: #fff;
+   border-bottom: 1px solid #e8ebed;
+   .Form-search{
+    padding: 2px 0;
+    
+    padding-right: 90px;
+    }
+   .Header-input {
+    border-radius: 20px;
+    img{
+        width : 32px;
+        height : 30px
+    }
+    div{
+        height: 100%;
+    }
+    width: 420px;
+    padding: 0 16px 0 8px;
+    display: flex;
+    border: 2px solid #e8e8e8;
+    height: 40px;
+    padding: 0 16px 0 8px;
+    input{
+            border: none;
+            flex: 1 1;
+            height: 100%;
+            border-radius: 20px;
+            width: 100%;
+            font-size: 0.9rem;
+            outline: none;
+            padding: 0 4px
+    }
+    &:focus-within{
+        border-color: #444;
+    }
+   }
+   .Header-image{
+    height: 100%;
+    display: flex;
+    h4{
+        margin: 0;
+        margin-left: 16px;
+        font-size : 0.9rem;
+    }
+    img {
+        height: 38px;
+        width : 38px;
+        border-radius: 8px;
+    }
+    
+   }
+   .Header-signin {
+    button {
+    background-color: #f05123;
+    border-radius: 999px;
+    border: none;
+    font-size: 0.9rem;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+    padding: 9px 20px;
+    }
+   }
+}
+
