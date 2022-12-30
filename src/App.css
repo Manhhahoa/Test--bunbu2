@@ -12,3 +12,10 @@
 .w-100{
     width: 100%;
 }
+.white-shadow{
+    background-color: #fff;
+    box-shadow: 2px -7px 12px 7px #f1eeee;
+}
+.cursor-poiter{
+    cursor: pointer;
+}
