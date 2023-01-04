@@ -5,6 +5,9 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
+.App {
+  height: 2000px;
+}
 .pst-absolute {
   position: absolute;
 }

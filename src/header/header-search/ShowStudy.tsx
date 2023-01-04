@@ -1,10 +1,11 @@
+import { type } from '@testing-library/user-event/dist/type'
 import '.././header-search/ShowStudy.scss'
 import OneStudy from './OneStudy'
-interface Study {
+type Study = {
     img: string,
     nameStudy: string
 }
-interface Props {
+type Props = {
     value: string,
     data: Study[]
 }
