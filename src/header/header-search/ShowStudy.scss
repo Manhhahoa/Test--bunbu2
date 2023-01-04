@@ -1,0 +1,20 @@
+.showstudy {
+  top: 100%;
+  left: 34.5%;
+  padding: 12px 24px;
+  margin-bottom: 6px;
+  width: 420px;
+  max-height: 300px;
+  .showmorestudy {
+    padding: 24px 0 12px 0;
+    justify-content: space-between;
+  }
+  .onestudy {
+    padding: 6px 0;
+    img {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+    }
+  }
+}
