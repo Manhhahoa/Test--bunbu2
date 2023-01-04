@@ -1,20 +1,14 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
+import useClickOutSide from '../../hook/UseClickOutSite';
 import { User } from '../DataHeader';
 
 const Profile = () => {
     const [checkDisplayProfile, setcheckDisplayProfile] = useState(false)
     const selectElement = useRef<HTMLHeadingElement>(null);
-    const handleClickOutside = (e: any) => {
-        if (!selectElement.current?.contains(e.target)) {
-            setcheckDisplayProfile(false);
-        }
-    };
-    useEffect(() => {
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => document.removeEventListener("mousedown", handleClickOutside);
-    });
+    const handleClickInsite = () => setcheckDisplayProfile(false)
+    useClickOutSide(selectElement, handleClickInsite)
     return (
-        <div>
+        <div ref={selectElement} className='pst-relative'>
             <img className='cursor-poiter' onClick={() => setcheckDisplayProfile(!checkDisplayProfile)} src="https://files.fullstack.edu.vn/f8-prod/user_photos/193714/625a8db43f524.jpg" alt="" />
             {checkDisplayProfile && (
                 <div className="user-profile white-shadow cursor-poiter">

@@ -1,23 +1,17 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
+import useClickOutSide from '../../hook/UseClickOutSite';
 
 const Notice = () => {
     const [checkDisplayNotice, setcheckDisplayNotice] = useState(false)
     const selectElement = useRef<HTMLHeadingElement>(null);
-    const handleClickOutside = (e: any) => {
-        if (!selectElement.current?.contains(e.target)) {
-            setcheckDisplayNotice(false);
-        }
-    };
-    useEffect(() => {
-        document.addEventListener("mousedown", handleClickOutside);
-        return () => document.removeEventListener("mousedown", handleClickOutside);
-    });
+    const handleClickInsite = () => setcheckDisplayNotice(false)
+    useClickOutSide(selectElement, handleClickInsite)
     return (
-        <div>
+        <div ref={selectElement} className='pst-relative' >
             <img className='cursor-poiter' onClick={() => setcheckDisplayNotice(!checkDisplayNotice)} src="https://banner2.cleanpng.com/20190926/pcg/transparent-basic-icons-icon-bell-icon-notification-icon-5d8d57bac00ec7.2987967515695441227867.jpg" alt="" />
             {checkDisplayNotice && (
                 <div className="notice white-shadow cursor-poiter">
-                    <h4>Thong bao</h4>
+                    <h4 className='fw-500'>Thông báo</h4>
                     <div className="d-flex">
                         <img
                             src="https://fullstack.edu.vn/assets/images/f8_avatar.png"

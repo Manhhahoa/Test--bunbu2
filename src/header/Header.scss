@@ -20,6 +20,7 @@
   border-bottom: 1px solid #e8ebed;
   .form-search {
     padding: 2px 0;
+    position: relative;
     .header-input {
       border-radius: 20px;
       img {
@@ -93,8 +94,8 @@
       width: 380px;
       border-radius: 10px;
       position: absolute;
-      top: 95%;
-      right: 130px;
+      top: 70px;
+      right: 16px;
       h4 {
         padding: 14px 20px;
       }
@@ -138,8 +139,8 @@
       border-radius: 10px;
       width: 400px;
       height: 164px;
-      top: 60px;
-      right: 80px;
+      top: 70px;
+      right: 0;
       h4 {
         padding: 16px 20px;
         font-size: 1.2rem;
@@ -165,8 +166,8 @@
     position: absolute;
     min-width: 240px;
     border-radius: 10px;
-    top: 60px;
-    right: 36px;
+    top: 70px;
+    right: 0;
     padding: 8px 24px;
     .d-flex {
       justify-content: space-between;
