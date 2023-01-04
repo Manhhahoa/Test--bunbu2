@@ -20,6 +20,7 @@ const Header = () => {
                     <Notice />
                     <Profile />
                 </div>
+
             </div>
         </div>
     );

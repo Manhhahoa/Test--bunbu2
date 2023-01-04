@@ -1,8 +1,12 @@
 import '.././header-search/ShowStudy.scss'
 import OneStudy from './OneStudy'
+interface Study {
+    img: string,
+    nameStudy: string
+}
 interface Props {
     value: string,
-    data: Array<any>
+    data: Study[]
 }
 const ShowStudy = ({ value, data }: Props) => {
     return (
