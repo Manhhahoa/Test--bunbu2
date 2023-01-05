@@ -3,6 +3,7 @@ import Study from "./header-onclick/Study";
 import Notice from "./header-onclick/Notice";
 import Profile from "./header-onclick/Profile";
 import InputSearch from "./header-search/InputSearch";
+import { Outlet } from "react-router";
 const Header = () => {
     return (
         <div>
@@ -20,8 +21,8 @@ const Header = () => {
                     <Notice />
                     <Profile />
                 </div>
-
             </div>
+            <Outlet />
         </div>
     );
 };

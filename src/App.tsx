@@ -1,27 +1,23 @@
 
 import './App.css';
 import Header from './header/Header';
-import BannerSwiper from './page/banner_swiper/BannerSwiper';
-import Selectionbar from './selection_bar/Selectionbar';
-import { Routes, Route, BrowserRouter, Link } from 'react-router-dom'
+import HomePage from './page/home/HomePage';
+import { Routes, Route, BrowserRouter } from 'react-router-dom'
+import RouteStudy from './page/route study/RouteStudy';
+import CoustList from './page/couse/CoustList';
 function App() {
 
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<div>
-          <Link to={'/header'} > <button>Next</button></Link>
-        </div>} path='/'>
+        <Route element={<Header />} path='/'>
+          <Route element={<HomePage />} path='/home'></Route>
+          <Route element={<RouteStudy />} path='/study'></Route>
+          <Route element={<CoustList />} path='/course'></Route>
         </Route>
-        <Route element={<div>HOME</div>} path='/home'>
-          <Route element={<p>ok</p>} path='/home/ok'></Route>
-        </Route>
-        <Route element={<Header />} path='/header'></Route>
-        <Route element={<BannerSwiper />} path='/banner'></Route>
         <Route path='*' element={<div>404</div>}></Route>
       </Routes>
     </BrowserRouter>
-
   );
 }
 
