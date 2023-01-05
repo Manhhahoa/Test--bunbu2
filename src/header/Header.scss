@@ -1,0 +1,198 @@
+.header {
+  position: fixed;
+  width: 100%;
+  .img-search {
+    background-image: url("https://fullstack.edu.vn/static/media/search.9bd3926522ea0937310c.svg");
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: 18px;
+    border-radius: 50%;
+    height: 32px;
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in-out;
+    width: 30px;
+  }
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  height: 66px;
+  background-color: #fff;
+  border-bottom: 1px solid #e8ebed;
+  .form-search {
+    padding: 2px 0;
+    position: relative;
+    .header-input {
+      border-radius: 20px;
+      img {
+        width: 32px;
+        height: 30px;
+      }
+      div {
+        height: 100%;
+      }
+      width: 420px;
+      padding: 0 16px 0 8px;
+      display: flex;
+      border: 2px solid #e8e8e8;
+      height: 40px;
+      padding: 0 16px 0 8px;
+      input {
+        border: none;
+        flex: 1 1;
+        height: 100%;
+        border-radius: 20px;
+        width: 100%;
+        font-size: 0.9rem;
+        outline: none;
+        padding: 0 4px;
+      }
+      &:focus-within {
+        border-color: #444;
+      }
+    }
+  }
+
+  .header-image {
+    height: 100%;
+    display: flex;
+    h4 {
+      margin: 0;
+      margin-left: 16px;
+      font-size: 0.9rem;
+    }
+    img {
+      height: 38px;
+      width: 38px;
+      border-radius: 8px;
+    }
+  }
+  .header-signin {
+    button {
+      border: none;
+      background-color: white;
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 8px;
+      margin-right: 16px;
+    }
+    div {
+      img {
+        padding: 4px;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      margin-left: 12px;
+      width: 28px;
+      height: 28px;
+    }
+    .list-study {
+      width: 380px;
+      border-radius: 10px;
+      position: absolute;
+      top: 70px;
+      right: 16px;
+      h4 {
+        padding: 14px 20px;
+      }
+      .img-study {
+        margin-bottom: 10px;
+        padding: 8px 12px;
+        img {
+          width: 120px;
+          margin-right: 12px;
+          border-radius: 15px;
+          height: 67px;
+        }
+        h5 {
+          font-size: 0.9rem;
+        }
+        p {
+          font-size: 0.8rem;
+        }
+        .percent {
+          height: 10px;
+          border-radius: 4px;
+          margin-top: 10px;
+          background-color: #ccc;
+          opacity: 0.8;
+          div {
+            height: 10px;
+            background-color: red;
+            width: 40%;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+          }
+        }
+        &:hover {
+          background-color: #ccc;
+          cursor: pointer;
+        }
+      }
+    }
+    .notice {
+      position: absolute;
+      border-radius: 10px;
+      width: 400px;
+      height: 164px;
+      top: 70px;
+      right: 0;
+      h4 {
+        padding: 16px 20px;
+        font-size: 1.2rem;
+      }
+      .d-flex {
+        img {
+          width: 42px;
+          height: 42px;
+          border-radius: 50%;
+        }
+      }
+      .d-flex {
+        padding: 8px 36px 8px 12px;
+        margin: 0 8px 8px 8px;
+        div {
+          padding: 0px 10px 0 16px;
+          font-size: 0.95rem;
+        }
+      }
+    }
+  }
+  .user-profile {
+    position: absolute;
+    min-width: 240px;
+    border-radius: 10px;
+    top: 70px;
+    right: 0;
+    padding: 8px 24px;
+    .d-flex {
+      justify-content: space-between;
+      img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin: 10px 0;
+      }
+      p {
+        font-size: 0.9rem;
+        opacity: 0.8;
+      }
+    }
+    hr {
+      border: none;
+      border-top: 1px solid rgba(0, 0, 0, 0.05);
+      margin: 8px 0;
+      height: 0;
+    }
+    p {
+      padding: 10px 0;
+      opacity: 0.8;
+      font-size: 0.9rem;
+    }
+  }
+}
