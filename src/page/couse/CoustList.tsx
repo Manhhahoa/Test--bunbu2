@@ -1,10 +1,8 @@
-import Selectionbar from '../../selection_bar/Selectionbar'
 import '../.././css/cssCoust/CoustList.scss'
 import FreeCoust from './FreeCoust'
 const CoustList = () => {
     return (
         <div>
-            <Selectionbar></Selectionbar>
             <div className='coust'>
                 <div className='coust-title'>
                     <h1>Khóa học</h1>

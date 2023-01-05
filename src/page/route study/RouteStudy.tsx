@@ -1,9 +1,7 @@
-import Selectionbar from '../../selection_bar/Selectionbar'
 import '../.././css/cssRouteStudy/RouteStudy.scss'
 const RouteStudy = () => {
     return (
         <div >
-            <Selectionbar />
             <div className='route-study'>
                 <h1>Lộ trình học Front-end</h1>
                 <div>

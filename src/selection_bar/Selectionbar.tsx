@@ -1,18 +1,14 @@
-import React from 'react'
 import { useNavigate } from 'react-router'
 import './Selectionbar.scss'
 const Selectionbar = () => {
     const nav = useNavigate()
     const goRouteStudyPage = () => {
-        console.log(1)
         nav('/study')
     }
     const goHomePage = () => {
-        console.log(1)
-        nav('/home')
+        nav('/')
     }
     const goCoursePage = () => {
-        console.log(1)
         nav('/course')
     }
 
