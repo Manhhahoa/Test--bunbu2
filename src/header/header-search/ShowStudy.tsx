@@ -1,4 +1,3 @@
-import { type } from '@testing-library/user-event/dist/type'
 import '.././header-search/ShowStudy.scss'
 import OneStudy from './OneStudy'
 type Study = {
