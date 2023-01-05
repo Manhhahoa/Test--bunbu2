@@ -6,14 +6,12 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import '../.././css/csshome/HomePage.scss'
-// import Selectionbar from '../../selection_bar/Selectionbar';
-// import Header from '../../header/Header';
 import Layout from '../../selection_bar/Layout';
 
 const HomePage = () => {
     return (
         <div className='d-flex home-page' >
-            <Layout></Layout>
+
             <div className='barner w-100'>
                 <Swiper
                     loop={true}
