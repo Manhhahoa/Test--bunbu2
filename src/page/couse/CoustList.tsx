@@ -1,5 +1,6 @@
 import '../.././css/cssCoust/CoustList.scss'
 import FreeCoust from './FreeCoust'
+import ProCoust from './ProCoust'
 const CoustList = () => {
     return (
         <div>
@@ -11,9 +12,12 @@ const CoustList = () => {
                 <div className='pro-coust'>
                     <h1>Khóa học Pro
                     </h1>
+                    <ProCoust />
+                    <h1>Khoá học miễn phí</h1>
                     <FreeCoust />
                 </div>
             </div>
+            <button >xoa</button>
         </div>
     )
 }

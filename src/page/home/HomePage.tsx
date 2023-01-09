@@ -11,7 +11,6 @@ import Layout from '../../selection_bar/Layout';
 const HomePage = () => {
     return (
         <div className='d-flex home-page' >
-
             <div className='barner w-100'>
                 <Swiper
                     loop={true}

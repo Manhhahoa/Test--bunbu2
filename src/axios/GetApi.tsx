@@ -1,11 +1,18 @@
-import axios from "axios"
 import { useDispatch } from 'react-redux'
 import { getCoust } from "../redux/coust/CoustSlice"
-const GetApi = async () => {
+import instance from "./Axios"
+export const GetApi = async () => {
     const dispatch = useDispatch()
-    const data = await axios.get('https://63b68cc958084a7af3b56b5d.mockapi.io/api/coust');
+    const data = await instance.get('/api/coust');
     const action = data.data;
     dispatch(getCoust(action))
 }
+export const DeleteApi = async (id: number) => {
+    const data = await instance.delete(`/api/coust/${id}`);
+    return data.data
+}
+export const PutApi = async (id: number) => {
+    const data = await instance.put(`/api/coust/${id}`, { Headers: {} });
+    return data.data
+}
 
-export default GetApi

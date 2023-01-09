@@ -6,7 +6,7 @@ const FreeCoust = () => {
     return (
         <div className='free-coust d-flex'>
             {
-                coust.slice(0, 4).map((coust) => {
+                coust.slice(4, 7).map((coust) => {
                     return <OneCoust img={coust.imgsrc} coustName={coust.name} />
                 })
             }

@@ -5,7 +5,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import RouteStudy from './page/route study/RouteStudy';
 import CoustList from './page/couse/CoustList';
 import Layout from './selection_bar/Layout';
-import GetApi from './axios/GetApi';
+import { GetApi } from './axios/GetApi';
 function App() {
   GetApi()
   return (
