@@ -1,21 +1,13 @@
+import { useSelector } from 'react-redux'
 import OneCoust from './OneCoust'
-
+import { RootState } from '../.././redux/Store'
 const FreeCoust = () => {
-    const ListCouseFree = [
-        {
-            img: 'https://files.fullstack.edu.vn/f8-prod/courses/7.png',
-            nameCoust: ''
-        },
-        {
-            img: 'https://files.fullstack.edu.vn/f8-prod/courses/2.png',
-            nameCoust: ''
-        }
-    ]
+    const coust = useSelector((state: RootState) => state.coust)
     return (
         <div>
             {
-                ListCouseFree.map((coust) => {
-                    return <OneCoust img={coust.img} coustName={coust.nameCoust} />
+                coust.slice(0, 3).map((coust) => {
+                    return <OneCoust img={coust.imgsrc} coustName={coust.name} />
                 })
             }
         </div>

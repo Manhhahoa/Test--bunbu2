@@ -1,7 +1,6 @@
 import { useRef, useState } from 'react'
 import useClickOutSide from '../../hook/UseClickOutSite';
 import { User } from '../DataHeader';
-
 const Profile = () => {
     const [checkDisplayProfile, setcheckDisplayProfile] = useState(false)
     const selectElement = useRef<HTMLHeadingElement>(null);

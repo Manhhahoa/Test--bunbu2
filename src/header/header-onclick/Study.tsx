@@ -1,10 +1,12 @@
 import { useRef, useState } from 'react'
-import { ListStudy } from "../DataHeader";
 import useClickOutSide from '../../hook/UseClickOutSite';
+import { useSelector } from 'react-redux'
+import { RootState } from '../.././redux/Store'
 const Study = () => {
     const [checkDisplayStudy, setcheckDisplayStudy] = useState(false)
-    const selectElement = useRef<HTMLHeadingElement>(null);
+    const selectElement = useRef<HTMLDivElement>(null);
     const handleClickInsite = () => setcheckDisplayStudy(false)
+    const coust = useSelector((state: RootState) => state.coust)
     useClickOutSide(selectElement, handleClickInsite)
     return (
         <div ref={selectElement} className="pst-relative">
@@ -12,7 +14,7 @@ const Study = () => {
             {checkDisplayStudy && (
                 <div className="list-study white-shadow">
                     <h4 className='fw-500'>Khóa học của tôi</h4>
-                    {ListStudy.map((study) => {
+                    {coust.slice(0, 4).map((study) => {
                         return (
                             <div className="d-flex img-study">
                                 <img src={study.imgsrc} alt="" />
