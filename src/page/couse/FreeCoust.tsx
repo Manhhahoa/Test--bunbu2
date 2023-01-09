@@ -1,12 +1,17 @@
-import { useSelector } from 'react-redux'
 import OneCoust from './OneCoust'
-import { RootState } from '../.././redux/Store'
-const FreeCoust = () => {
-    const coust = useSelector((state: RootState) => state.coust)
+type Coust = {
+    imgsrc: string;
+    name: string;
+    timelearn: number;
+}
+type Props = {
+    coust: Coust[]
+}
+const FreeCoust = ({ coust }: Props) => {
     return (
         <div className='free-coust d-flex'>
-            {
-                coust.slice(0, 4).map((coust) => {
+            {coust &&
+                coust.map((coust) => {
                     return <OneCoust img={coust.imgsrc} coustName={coust.name} />
                 })
             }

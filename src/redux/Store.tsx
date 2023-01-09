@@ -1,9 +1,9 @@
 import { configureStore } from '@reduxjs/toolkit'
-import coustReducer from '../redux/coust/CoustSlice'
+import userReducer from './user/UserSlice'
 
 export const store = configureStore({
     reducer: {
-        coust: coustReducer,
+        user: userReducer,
     }
 })
 export type RootState = ReturnType<typeof store.getState>

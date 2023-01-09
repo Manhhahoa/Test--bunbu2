@@ -5,13 +5,19 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import RouteStudy from './page/route study/RouteStudy';
 import CoustList from './page/couse/CoustList';
 import Layout from './selection_bar/Layout';
-import { GetApi } from './axios/GetApi';
+import SignIn from './page/sign-in/SignIn';
+import PrivateRoute from './router/PrivateRoute';
 function App() {
-  GetApi()
   return (
     <BrowserRouter>
       <Routes>
-        <Route element={<Layout />} path='/' >
+        <Route element={<SignIn />} path='sign-in'></Route>
+        <Route
+          path='/'
+          element={<PrivateRoute>
+            <Layout />
+          </PrivateRoute>}
+        >
           <Route element={<HomePage />} path='/'></Route>
           <Route element={<RouteStudy />} path='/study'></Route>
           <Route element={<CoustList />} path='/course'></Route>

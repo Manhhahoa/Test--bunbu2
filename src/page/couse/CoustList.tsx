@@ -1,7 +1,18 @@
+import { useEffect, useState } from 'react'
 import '../.././css/cssCoust/CoustList.scss'
+import { GetApi } from '../../axios/GetApi'
 import FreeCoust from './FreeCoust'
 import ProCoust from './ProCoust'
 const CoustList = () => {
+    type Coust = {
+        imgsrc: string;
+        name: string;
+        timelearn: number;
+    }
+    const [coust, setCoust] = useState<Coust[]>()
+    useEffect(() => {
+        GetApi('/coust').then((data) => setCoust(data))
+    }, [])
     return (
         <div>
             <div className='coust'>
@@ -12,12 +23,11 @@ const CoustList = () => {
                 <div className='pro-coust'>
                     <h1>Khóa học Pro
                     </h1>
-                    <ProCoust />
+                    {coust && <ProCoust coust={coust.slice(4, 7)} />}
                     <h1>Khoá học miễn phí</h1>
-                    <FreeCoust />
+                    {coust && <FreeCoust coust={coust.slice(0, 4)} />}
                 </div>
             </div>
-            <button >xoa</button>
         </div>
     )
 }
