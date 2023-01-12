@@ -8,7 +8,7 @@ import '../.././css/csshome/HomePage.scss'
 import CoustList from '../couse/CoustList';
 const HomePage = () => {
     return (
-        <>
+        <div>
             <div className='d-flex home-page' >
                 <div className='barner w-100'>
                     <Swiper
@@ -53,9 +53,8 @@ const HomePage = () => {
             </div>
             <div className='home-listCoust'>
                 <CoustList />
-
             </div>
-        </>
+        </div>
 
     );
 };

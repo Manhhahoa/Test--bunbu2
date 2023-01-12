@@ -1,3 +1,4 @@
+import React from 'react';
 import OneCoust from './OneCoust'
 type Coust = {
     imgsrc: string;
@@ -19,4 +20,4 @@ const ProCoust = ({ coust }: Props) => {
     )
 }
 
-export default ProCoust
+export default React.memo(ProCoust)

@@ -1,15 +1,19 @@
-import { useDispatch } from "react-redux"
+import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
-import { GetApi } from "../../axios/GetApi";
-import { getUser } from "../../redux/user/UserSlice";
+import { setUser } from "../../axios/GetApi";
+import { useAppDispatch, useAppSelector } from "../../redux/Hook";
 const SignIn = () => {
     const nav = useNavigate()
-    const dispatch = useDispatch();
-    const signIn = async () => {
-        const action = await GetApi('/user')
-        dispatch(getUser(action))
-        nav('/')
+    const dispatch = useAppDispatch();
+    const user = useAppSelector((state) => state.user);
+    const signIn = () => {
+        setUser().then(user => dispatch(user));
     }
+    useEffect(() => {
+        if (user.id) {
+            nav('/')
+        }
+    }, [nav, user])
     return (
         <div>
             <button onClick={signIn}> Đăng nhập</button>

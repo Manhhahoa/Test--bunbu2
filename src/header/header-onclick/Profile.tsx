@@ -16,13 +16,13 @@ const Profile = () => {
     return (
         <div ref={selectElement} className='pst-relative'>
             <img className='cursor-poiter' onClick={() => setcheckDisplayProfile(!checkDisplayProfile)} src="https://files.fullstack.edu.vn/f8-prod/user_photos/193714/625a8db43f524.jpg" alt="" />
-            {checkDisplayProfile && user.length >= 1 && (
+            {checkDisplayProfile && user.id && (
                 <div className="user-profile white-shadow cursor-poiter">
                     <div className="d-flex">
-                        <img src={user[0].avatar} alt="" />
+                        <img src={user.avatar} alt="" />
                         <div>
-                            <h4> {user[0].name}</h4>
-                            <p>{user[0].mail}</p>
+                            <h4> {user.name}</h4>
+                            <p>{user.mail}</p>
                         </div>
                     </div>
                     <hr />

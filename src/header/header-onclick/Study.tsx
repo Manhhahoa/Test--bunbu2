@@ -8,13 +8,19 @@ const Study = () => {
         timelearn: number;
     }
     const [checkDisplayStudy, setcheckDisplayStudy] = useState(false)
+    const [loading, setLoading] = useState(false)
     const selectElement = useRef<HTMLDivElement>(null);
     const handleClickInsite = () => setcheckDisplayStudy(false)
     useClickOutSide(selectElement, handleClickInsite)
     const [coust, setCoust] = useState<Coust[]>()
     const myCoust = async () => {
         setcheckDisplayStudy(!checkDisplayStudy)
-        setCoust(await GetApi('/coust'))
+        if (!checkDisplayStudy) {
+            setLoading(true)
+            setCoust(await GetApi('/coust'))
+            setLoading(false)
+        }
+
     }
     return (
         <div ref={selectElement} className="pst-relative">
@@ -36,6 +42,10 @@ const Study = () => {
                             </div>
                         );
                     })}
+                    {loading &&
+                        <div className='d-flex-colum'>
+                            <img className='loading-img' src='https://img.idesign.vn/2018/10/23/id-loading-1.gif' alt='' />
+                        </div>}
                 </div>
             )}
 

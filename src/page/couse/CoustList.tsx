@@ -1,3 +1,4 @@
+import React from 'react';
 import { useEffect, useState } from 'react'
 import '../.././css/cssCoust/CoustList.scss'
 import { GetApi } from '../../axios/GetApi'
@@ -15,6 +16,7 @@ const CoustList = () => {
     }, [])
     return (
         <div>
+
             <div className='coust'>
                 <div className='coust-title'>
                     <h1>Khóa học</h1>
@@ -32,4 +34,4 @@ const CoustList = () => {
     )
 }
 
-export default CoustList
+export default React.memo(CoustList)
