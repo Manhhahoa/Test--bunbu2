@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react"
-import { GetApi } from "../../axios/GetApi"
 import useClickOutSide from "../../hook/UseClickOutSite"
 import ShowStudy from "./ShowStudy"
 import { Coust } from '../.././interface/coust_interface/CoustInterface'
 import useDebounce from "../../hook/Usedebound"
+import { useAppSelector } from "../../redux/Hook"
 const InputSearch = () => {
     const [checkSearch, setCheckSearch] = useState(false)
     const [inputValue, setInputValue] = useState('')
@@ -12,8 +12,8 @@ const InputSearch = () => {
     const handleClickInsite = () => setCheckSearch(false)
     const [datastudy, setDatastudy] = useState<Coust[]>()
     useClickOutSide(selectElement, handleClickInsite)
+    const data = useAppSelector(state => state.coust)
     const getSearchCoust = async (key: string) => {
-        const data = await GetApi('/coust');
         const result: Coust[] = []
         data.map((coust: Coust) => {
             if (coust.name.toLowerCase().includes(key)) {
@@ -33,7 +33,7 @@ const InputSearch = () => {
     }
     useEffect(() => {
         getSearchCoust(inputValue)
-    }, [debouncedValue, inputValue])
+    }, [debouncedValue])
     return (
         <div ref={selectElement}>
             <div className="form-search">

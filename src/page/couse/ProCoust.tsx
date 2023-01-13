@@ -1,10 +1,6 @@
 import React from 'react';
 import OneCoust from './OneCoust'
-type Coust = {
-    imgsrc: string;
-    name: string;
-    timelearn: number;
-}
+import { Coust } from '../../interface/coust_interface/CoustInterface';
 type Props = {
     coust: Coust[]
 }
@@ -13,7 +9,7 @@ const ProCoust = ({ coust }: Props) => {
         <div className='free-coust d-flex'>
             {
                 coust.map((coust) => {
-                    return <OneCoust img={coust.imgsrc} coustName={coust.name} />
+                    return <OneCoust img={coust.imgsrc} coustName={coust.name} id={coust.id} />
                 })
             }
         </div>

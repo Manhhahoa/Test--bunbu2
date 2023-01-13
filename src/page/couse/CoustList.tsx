@@ -1,19 +1,10 @@
 import React from 'react';
-import { useEffect, useState } from 'react'
 import '../.././css/cssCoust/CoustList.scss'
-import { GetApi } from '../../axios/GetApi'
 import FreeCoust from './FreeCoust'
 import ProCoust from './ProCoust'
+import { useAppSelector } from '../../redux/Hook';
 const CoustList = () => {
-    type Coust = {
-        imgsrc: string;
-        name: string;
-        timelearn: number;
-    }
-    const [coust, setCoust] = useState<Coust[]>()
-    useEffect(() => {
-        GetApi('/coust').then((data) => setCoust(data))
-    }, [])
+    const coust = useAppSelector(state => state.coust)
     return (
         <div>
 

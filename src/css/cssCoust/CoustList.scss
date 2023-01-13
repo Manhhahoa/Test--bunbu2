@@ -47,6 +47,26 @@
             opacity: 1;
             border-radius: 20px;
           }
+          span {
+            display: block;
+            position: absolute;
+            top: 0px;
+            right: 0px;
+            background-color: #cccccc;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: black;
+          }
+          p {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: red;
+            padding: 5px 10px;
+            border-radius: 5px;
+            background-color: #cccccc;
+          }
         }
         img {
           width: 100%;
