@@ -5,8 +5,8 @@
   box-sizing: border-box;
   font-family: "Montserrat", sans-serif;
 }
-.App {
-  height: 2000px;
+body {
+  position: relative;
 }
 .pst-absolute {
   position: absolute;
@@ -21,6 +21,9 @@
   display: flex;
   align-items: center;
 }
+.d-none {
+  display: none;
+}
 .d-flex-colum {
   display: flex;
   flex-direction: column;
@@ -32,7 +35,7 @@
 }
 .white-shadow {
   background-color: #fff;
-  box-shadow: 2px -7px 12px 7px #f1eeee;
+  box-shadow: 0px 0px 11px 3px #f1eeee;
 }
 .cursor-poiter {
   cursor: pointer;

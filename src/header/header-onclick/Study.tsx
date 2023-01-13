@@ -1,18 +1,22 @@
 import { useRef, useState } from 'react'
-import { ListStudy } from "../DataHeader";
 import useClickOutSide from '../../hook/UseClickOutSite';
+import { useAppSelector } from '../../redux/Hook';
 const Study = () => {
     const [checkDisplayStudy, setcheckDisplayStudy] = useState(false)
-    const selectElement = useRef<HTMLHeadingElement>(null);
+    const selectElement = useRef<HTMLDivElement>(null);
     const handleClickInsite = () => setcheckDisplayStudy(false)
     useClickOutSide(selectElement, handleClickInsite)
+    const listCoust = useAppSelector(state => state.coust)
+    const mylistCoust = () => {
+        setcheckDisplayStudy(!checkDisplayStudy)
+    }
     return (
         <div ref={selectElement} className="pst-relative">
-            <button onClick={() => setcheckDisplayStudy(!checkDisplayStudy)} className='cursor-poiter' >Khóa học của tôi</button>
+            <button onClick={mylistCoust} className='cursor-poiter' >Khóa học của tôi</button>
             {checkDisplayStudy && (
                 <div className="list-study white-shadow">
                     <h4 className='fw-500'>Khóa học của tôi</h4>
-                    {ListStudy.map((study) => {
+                    {listCoust && listCoust.slice(0, 4).map((study) => {
                         return (
                             <div className="d-flex img-study">
                                 <img src={study.imgsrc} alt="" />

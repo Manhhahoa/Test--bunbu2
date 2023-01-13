@@ -11,6 +11,16 @@ const RouteStudy = () => {
                 </div>
                 <p>Các khóa học có thể chưa đầy đủ, F8 vẫn đang nỗ lực hoàn thiện trong thời gian sớm nhất.</p>
             </div>
+            <div className='route-study'>
+                <h2>
+                    1. Tìm hiểu về ngành IT
+                </h2>
+                <div>
+                    <p>
+                        Để theo ngành IT - Phần mềm cần rèn luyện những kỹ năng nào? Bạn đã có sẵn tố chất phù hợp với ngành chưa? Cùng thăm quan các công ty IT và tìm hiểu về văn hóa, tác phong làm việc của ngành này nhé các bạn.
+                    </p>
+                </div>
+            </div>
         </div>
     )
 }

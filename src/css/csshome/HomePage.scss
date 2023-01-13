@@ -1,6 +1,7 @@
 .home-page {
   margin-top: 70px;
   .page-slice {
+    margin-top: 20px;
     color: white;
     .slice-text {
       padding: 0 36px 36px 36px;
@@ -27,8 +28,39 @@
   }
   .barner {
     .swiper {
-      margin-left: 100px;
+      margin-left: 96px;
       padding: 0 40px 0 20px;
+    }
+    .swiper-button-prev {
+      left: 5px;
+      background-color: #fff;
+      box-shadow: -1px 2px 10px 4px #f1eeee;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      color: black;
+      &::after {
+        font-size: unset;
+      }
+    }
+    .swiper-button-next {
+      right: 20px;
+      background-color: #fff;
+      box-shadow: -1px 2px 10px 4px #f1eeee;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      color: black;
+      &::after {
+        font-size: unset;
+      }
+    }
+  }
+}
+.home-listCoust {
+  .coust {
+    .coust-title {
+      display: none;
     }
   }
 }

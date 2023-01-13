@@ -1,12 +1,10 @@
 import '.././header-search/ShowStudy.scss'
 import OneStudy from './OneStudy'
-type Study = {
-    img: string,
-    nameStudy: string
-}
+import { Coust } from '../.././interface/coust_interface/CoustInterface'
+
 type Props = {
     value: string,
-    data: Study[]
+    data: Coust[]
 }
 const ShowStudy = ({ value, data }: Props) => {
     return (
@@ -20,10 +18,12 @@ const ShowStudy = ({ value, data }: Props) => {
                 <p className='fz-low9 opacity-8'>Xem thêm</p>
             </div>
             <hr className='hr' />
-            {
+            {data.length > 0 ?
                 data.map(value => {
-                    return <OneStudy img={value.img} name={value.nameStudy} />
-                })
+                    return <OneStudy img={value.imgsrc} name={value.name} />
+                }) : <div>
+                    Không có kết quả phù hợp
+                </div>
             }
         </div>
     )

@@ -1,28 +1,24 @@
-import React, { useRef, useState } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import useClickOutSide from "../../hook/UseClickOutSite"
 import ShowStudy from "./ShowStudy"
-
+import { Coust } from '../.././interface/coust_interface/CoustInterface'
+import useDebounce from "../../hook/Usedebound"
+import { useAppSelector } from "../../redux/Hook"
 const InputSearch = () => {
     const [checkSearch, setCheckSearch] = useState(false)
     const [inputValue, setInputValue] = useState('')
+    const debouncedValue = useDebounce<string>(inputValue, 1000)
     const selectElement = useRef<HTMLDivElement>(null);
     const handleClickInsite = () => setCheckSearch(false)
-    const ListStudy: { img: string, nameStudy: string }[] = [
-        {
-            img: 'https://files.fullstack.edu.vn/f8-prod/courses/14/624faac11d109.png',
-            nameStudy: 'khóa học 1'
-        },
-        {
-            img: 'https://files.fullstack.edu.vn/f8-prod/courses/4/61a9e9e701506.png',
-            nameStudy: 'khóa học 2'
-        },
-        {
-            img: 'https://files.fullstack.edu.vn/f8-prod/courses/4/61a9e9e701506.png',
-            nameStudy: 'khóa học 3'
-        },
-
-    ]
+    const [datastudy, setDatastudy] = useState<Coust[]>([])
     useClickOutSide(selectElement, handleClickInsite)
+    const data = useAppSelector(state => state.coust)
+    const getSearchCoust = (key: string) => {
+        const result: Coust[] = data.filter((coust: Coust) => {
+            return coust.name.toLowerCase().includes(key)
+        })
+        setDatastudy(result)
+    }
     const inputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setInputValue(e.target.value)
         if (e.target.value !== '') {
@@ -31,6 +27,9 @@ const InputSearch = () => {
             setCheckSearch(false)
         }
     }
+    useEffect(() => {
+        getSearchCoust(debouncedValue)
+    }, [debouncedValue])
     return (
         <div ref={selectElement}>
             <div className="form-search">
@@ -47,7 +46,7 @@ const InputSearch = () => {
                 </div>
                 <div >
                     {
-                        checkSearch && <ShowStudy value={inputValue} data={ListStudy} />
+                        checkSearch && <ShowStudy value={inputValue} data={datastudy} />
                     }
                 </div>
             </div>
