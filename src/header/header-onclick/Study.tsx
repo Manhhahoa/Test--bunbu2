@@ -30,9 +30,6 @@ const Study = () => {
                             </div>
                         );
                     })}
-                    {/* <div className='d-flex-colum'>
-                        <img className='loading-img' src='https://img.idesign.vn/2018/10/23/id-loading-1.gif' alt='' />
-                    </div> */}
                 </div>
             )}
 

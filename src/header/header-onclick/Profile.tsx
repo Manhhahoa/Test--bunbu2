@@ -1,10 +1,10 @@
 import { useRef, useState } from 'react'
-import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import useClickOutSide from '../../hook/UseClickOutSite';
+import { useAppSelector } from '../../redux/Hook';
 import { RootState } from '../../redux/Store';
 const Profile = () => {
-    const user = useSelector((state: RootState) => state.user)
+    const user = useAppSelector((state: RootState) => state.user)
     const nav = useNavigate()
     const [checkDisplayProfile, setcheckDisplayProfile] = useState(false)
     const selectElement = useRef<HTMLHeadingElement>(null);

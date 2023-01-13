@@ -1,7 +1,7 @@
 import instance from "./Axios"
 import { setUserSignIn } from "../redux/user/UserSlice";
 import { AppDispatch } from "../redux/Store";
-import { addCoust, deleteCoust, setCoustSignIn, updateCoust } from "../redux/coust/CoustSlice";
+import { addCoust, deleteCoust, setCoustSignIn, updateCoust } from ".././redux/coust/CoustSlice";
 export const GetApi = async (link: string) => {
     const data = await instance.get(link);
     return data.data

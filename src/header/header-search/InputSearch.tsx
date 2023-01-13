@@ -10,16 +10,12 @@ const InputSearch = () => {
     const debouncedValue = useDebounce<string>(inputValue, 1000)
     const selectElement = useRef<HTMLDivElement>(null);
     const handleClickInsite = () => setCheckSearch(false)
-    const [datastudy, setDatastudy] = useState<Coust[]>()
+    const [datastudy, setDatastudy] = useState<Coust[]>([])
     useClickOutSide(selectElement, handleClickInsite)
     const data = useAppSelector(state => state.coust)
-    const getSearchCoust = async (key: string) => {
-        const result: Coust[] = []
-        data.map((coust: Coust) => {
-            if (coust.name.toLowerCase().includes(key)) {
-                result.push(coust)
-            }
-            return result;
+    const getSearchCoust = (key: string) => {
+        const result: Coust[] = data.filter((coust: Coust) => {
+            return coust.name.toLowerCase().includes(key)
         })
         setDatastudy(result)
     }
@@ -32,7 +28,7 @@ const InputSearch = () => {
         }
     }
     useEffect(() => {
-        getSearchCoust(inputValue)
+        getSearchCoust(debouncedValue)
     }, [debouncedValue])
     return (
         <div ref={selectElement}>
@@ -50,7 +46,7 @@ const InputSearch = () => {
                 </div>
                 <div >
                     {
-                        checkSearch && datastudy && <ShowStudy value={inputValue} data={datastudy} />
+                        checkSearch && <ShowStudy value={inputValue} data={datastudy} />
                     }
                 </div>
             </div>

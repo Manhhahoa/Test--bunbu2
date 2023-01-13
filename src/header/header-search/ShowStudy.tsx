@@ -18,13 +18,10 @@ const ShowStudy = ({ value, data }: Props) => {
                 <p className='fz-low9 opacity-8'>Xem thêm</p>
             </div>
             <hr className='hr' />
-            {
+            {data.length > 0 ?
                 data.map(value => {
                     return <OneStudy img={value.imgsrc} name={value.name} />
-                })
-            }
-            {
-                data.length === 0 && <div>
+                }) : <div>
                     Không có kết quả phù hợp
                 </div>
             }
