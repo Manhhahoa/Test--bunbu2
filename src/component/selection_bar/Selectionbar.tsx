@@ -2,8 +2,8 @@ import { useRef, useState } from 'react';
 import { useNavigate } from 'react-router'
 import { Modal } from 'antd';
 import './Selectionbar.scss'
-import { addOneCoust } from '../axios/GetApi';
-import { useAppDispatch } from '../redux/Hook';
+import { addOneCoust } from '../../axios/GetApi';
+import { useAppDispatch } from '../../redux/Hook';
 const Selectionbar = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const refname = useRef<any>()

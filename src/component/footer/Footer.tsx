@@ -1,4 +1,4 @@
-import '../.././src/css/cssFooter/Footer.scss'
+import '../.././css/cssFooter/Footer.scss'
 import FooterCompany from './FooterCompany'
 import FooterContact from './FooterContact'
 import FooterF8 from './FooterF8'

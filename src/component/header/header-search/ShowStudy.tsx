@@ -1,6 +1,6 @@
-import '.././header-search/ShowStudy.scss'
+import './ShowStudy.scss'
 import OneStudy from './OneStudy'
-import { Coust } from '../.././interface/coust_interface/CoustInterface'
+import { Coust } from '../../../interface/coust_interface/CoustInterface'
 
 type Props = {
     value: string,

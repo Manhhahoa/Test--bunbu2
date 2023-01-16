@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
-import useClickOutSide from '../../hook/UseClickOutSite';
-import { useAppSelector } from '../../redux/Hook';
+import useClickOutSide from '../../../hook/UseClickOutSite';
+import { useAppSelector } from '../../../redux/Hook';
 const Study = () => {
     const [checkDisplayStudy, setcheckDisplayStudy] = useState(false)
     const selectElement = useRef<HTMLDivElement>(null);

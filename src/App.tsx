@@ -3,7 +3,7 @@ import HomePage from './page/home/HomePage';
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import RouteStudy from './page/route study/RouteStudy';
 import CoustList from './page/couse/CoustList';
-import Layout from './selection_bar/Layout';
+import Layout from './component/selection_bar/Layout';
 import SignIn from './page/sign-in/SignIn';
 import PrivateRoute from './router/PrivateRoute';
 function App() {
@@ -26,5 +26,4 @@ function App() {
     </BrowserRouter>
   );
 }
-
 export default App;

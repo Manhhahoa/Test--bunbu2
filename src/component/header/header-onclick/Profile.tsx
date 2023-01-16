@@ -1,8 +1,8 @@
 import { useRef, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
-import useClickOutSide from '../../hook/UseClickOutSite';
-import { useAppSelector } from '../../redux/Hook';
-import { RootState } from '../../redux/Store';
+import useClickOutSide from '../../../hook/UseClickOutSite';
+import { useAppSelector } from '../../../redux/Hook';
+import { RootState } from '../../../redux/Store';
 const Profile = () => {
     const user = useAppSelector((state: RootState) => state.user)
     const nav = useNavigate()
