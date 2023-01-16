@@ -1,9 +1,9 @@
 import React, { useEffect, useRef, useState } from "react"
-import useClickOutSide from "../../hook/UseClickOutSite"
+import useClickOutSide from "../../../hook/UseClickOutSite"
 import ShowStudy from "./ShowStudy"
-import { Coust } from '../.././interface/coust_interface/CoustInterface'
-import useDebounce from "../../hook/Usedebound"
-import { useAppSelector } from "../../redux/Hook"
+import { Coust } from '../../../interface/coust_interface/CoustInterface'
+import useDebounce from "../../../hook/Usedebound"
+import { useAppSelector } from "../../../redux/Hook"
 const InputSearch = () => {
     const [checkSearch, setCheckSearch] = useState(false)
     const [inputValue, setInputValue] = useState('')

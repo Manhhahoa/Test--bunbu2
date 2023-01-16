@@ -1,5 +1,5 @@
 import { useRef, useState } from 'react'
-import useClickOutSide from '../../hook/UseClickOutSite';
+import useClickOutSide from '../../../hook/UseClickOutSite';
 
 const Notice = () => {
     const [checkDisplayNotice, setcheckDisplayNotice] = useState(false)
