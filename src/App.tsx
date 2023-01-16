@@ -3,11 +3,7 @@ import HomePage from './page/home/HomePage';
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import RouteStudy from './page/route study/RouteStudy';
 import CoustList from './page/couse/CoustList';
-<<<<<<< HEAD
 import Layout from './component/selection_bar/Layout';
-=======
-import Layout from './selection_bar/Layout';
->>>>>>> 5b2b4762a820d903ae65ecd21dec6c507ec4cf5f
 import SignIn from './page/sign-in/SignIn';
 import PrivateRoute from './router/PrivateRoute';
 function App() {
