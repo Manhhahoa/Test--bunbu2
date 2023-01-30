@@ -1,0 +1,19 @@
+.sign-in {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  align-items: center;
+  background-image: url("https://accounts.fullstack.edu.vn/static/media/f8_bg_auth_1366.cb1a38f30212c78aa891.png");
+  .form-signin {
+    width: 50%;
+    // padding: 30px 20px 20px 20px;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  Form {
+    width: 90%;
+  }
+}

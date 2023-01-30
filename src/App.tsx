@@ -6,10 +6,12 @@ import CoustList from './page/couse/CoustList';
 import Layout from './component/selection_bar/Layout';
 import SignIn from './page/sign-in/SignIn';
 import PrivateRoute from './router/PrivateRoute';
+import SignUp from './page/sign-up/SignUp';
 function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path='/sign-up' element={<SignUp />} />
         <Route element={<SignIn />} path='sign-in'></Route>
         <Route
           path='/'
