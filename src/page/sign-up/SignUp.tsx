@@ -2,7 +2,7 @@ import React from 'react';
 import '../sign-up/SignUp.scss'
 import { useForm } from 'react-hook-form'
 import { Link, useNavigate } from 'react-router-dom';
-import { UserSubmitForm, schema } from "../../yupSubmitUser/YupSubmitUser";
+import { UserSubmitForm, schema } from "./yupSubmitUser/YupSubmitUser";
 import { yupResolver } from "@hookform/resolvers/yup";
 const App: React.FC = () => {
     const nav = useNavigate()
@@ -34,15 +34,6 @@ const App: React.FC = () => {
                         style={errors.password && { border: '1px solid red' }}
                     />
                     <p>{errors.password?.message}</p>
-                    <br />
-                    <label htmlFor="repass">Nhập lại Password</label>
-                    <input type="password" {...register("repass")}
-                        placeholder='nhap repass' className='w-100 fz-low9' name='repass' id='repass'
-                        style={errors.repass && { border: '1px solid red' }}
-                    />
-                    <p>{errors.repass?.message}</p>
-
-                    <br />
                     <button className='p8-12 boder-us10 cursor-poiter' type='submit'>Sign-Up</button>
                 </form>
                 <p className="to-signin fz-low9">đã có tài khoản ? <Link to={'/sign-in'}>Đăng nhập</Link></p>

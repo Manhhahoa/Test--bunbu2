@@ -4,7 +4,7 @@ import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import RouteStudy from './page/route study/RouteStudy';
 import CoustList from './page/couse/CoustList';
 import Layout from './component/selection_bar/Layout';
-import SignIn from './page/sign-in/SignIn';
+import SignIn from './page/signin/SignIn';
 import PrivateRoute from './router/PrivateRoute';
 import SignUp from './page/sign-up/SignUp';
 function App() {

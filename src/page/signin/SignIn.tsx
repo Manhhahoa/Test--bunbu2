@@ -2,10 +2,10 @@ import { useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { setCoust, setUser } from "../../axios/GetApi";
 import { useAppDispatch, useAppSelector } from "../../redux/Hook";
-import '.././sign-in/Sign-In.scss'
+import './SignIn.scss'
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { UserSubmitForm, schema } from "../../yupSubmitUser/YupSubmitUser";
+import { UserSubmitForm, schema } from "../sign-up/yupSubmitUser/YupSubmitUser";
 const SignIn = () => {
     const {
         register,
@@ -17,6 +17,7 @@ const SignIn = () => {
     const dispatch = useAppDispatch();
     const user = useAppSelector((state) => state.user);
     const signIn = (data: UserSubmitForm) => {
+        console.log(data)
         dispatch(setUser())
         dispatch(setCoust())
     }
@@ -49,21 +50,6 @@ const SignIn = () => {
                         }}
                     />
                     <p>{errors.password?.message}</p>
-                    {/* <br />
-                    <label htmlFor="repass">Nhập lại Password</label>
-                    <input type="password" {...register("repass",
-                        {
-                            required: true,
-                            minLength: 5
-                        }
-                    )}
-                        placeholder='nhap repass' className='w-100 fz-low9' name='repass' id='repass'
-                        style={errors.repass && { border: '1px solid red' }}
-                        onClick={() => {
-                            clearErrors('repass')
-                        }}
-                    />
-                    {errors.repass && <p> Mật khẩu không khớp </p>} */}
                     <br />
                     <button className='p8-12 boder-us10 cursor-poiter' type='submit'>Sign-in</button>
                 </form>
